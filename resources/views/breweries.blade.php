@@ -22,7 +22,7 @@
 
             {{-- dd($breweries)  --}}
 
-            @foreach($breweries['data'] as $brewerie)
+            @foreach($breweries as $brewerie)
                 <li class="border p-2">
                     <div>Name: {{$brewerie['name']}}</div>
                     <div>Type: {{$brewerie['brewery_type']}}</div>

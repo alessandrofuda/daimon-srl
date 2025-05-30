@@ -25,7 +25,6 @@ class BreweriesApiCalls
             //$response->successful() : bool;
             // $response->ok() : bool;
 
-
         }catch(Exception $e) {
             $err = 'Error in '.__METHOD__.': '.$e->getMessage();
             Log::error($err);
@@ -45,11 +44,12 @@ class BreweriesApiCalls
             $currentPage = Paginator::resolveCurrentPage(); // 1;
             $perPage = 10;
 
-            $response = Http::acceptJson()->contentType('application/json')->get($url, ['page' => $currentPage, 'per_page' => $perPage]);
+            $response = Http::acceptJson()->contentType('application/json')->get($url);
+            // $response = Http::acceptJson()->contentType('application/json')->get($url, ['page' => $currentPage, 'per_page' => $perPage]);
 
-            $breweriesData = $response->json(); // dati JSON
-            $items = Collection::make($breweriesData);
-            $breweries = new Paginator($items, $perPage, $currentPage, ['path' => $url]);
+            // $breweriesData = $response->json(); // dati JSON
+            // $items = Collection::make($breweriesData);
+            $breweries = $response->json(); // new Paginator($items, $perPage, $currentPage, ['path' => $url]);
 
         }catch(Exception $e){
             $err = 'Error in '.__METHOD__.': '.$e->getMessage();

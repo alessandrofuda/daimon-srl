@@ -18,8 +18,7 @@ class BreweriesController extends Controller
         $url = config('services.internal_endpoint.url');
 
         // authenticated api call towards laravel backend
-        $breweriesApiCalls = new BreweriesApiCalls();
-        $breweries = $breweriesApiCalls->authApiCall($token, $url);
+        $breweries = (new BreweriesApiCalls())->authApiCall($token, $url);
 
         return view('breweries', ['breweries' => $breweries['breweries']]);
     }

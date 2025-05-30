@@ -16,8 +16,7 @@ class BreweriesController extends Controller
     public function getBreweries() : JsonResponse
     {
         try{
-            $brewerisApiCall = new BreweriesApiCalls();
-            $breweries = $brewerisApiCall->publicApiCall(config('services.openbrewerydb.url'));
+            $breweries = (new BreweriesApiCalls())->publicApiCall(config('services.openbrewerydb.url'));
 
         }catch (Exception $e){
             $err= 'Error in '.__METHOD__.': '.$e->getMessage();
