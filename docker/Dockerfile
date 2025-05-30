@@ -28,9 +28,9 @@ RUN apt-get update && apt-get install -y \
 # install mysql in THIS container only for running mysqldump command on remote db (in container DB)
 # RUN apt-get update && apt-get install -y mariadb-server
 
-#Install Node.js v16 & NPM
-RUN curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash - \
-    && apt-get update && apt-get install -y nodejs && npm install -g npm@9.2.0 \
+#Install Node.js & NPM
+RUN curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - \
+    && apt-get update && apt-get install -y nodejs \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 

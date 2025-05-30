@@ -31,4 +31,14 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+
+    // custom
+    'openbrewerydb' => [
+        'url' => env('OPENBREWERY_URL'),
+    ],
+
+    'internal_endpoint' => [
+        'url' => env('INTERNAL_BE_ENDPOINT'),
+    ]
+
 ];
