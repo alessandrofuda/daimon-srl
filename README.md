@@ -20,4 +20,4 @@ Ho evitato di renderizzare la pagina in js, ho fatto tutto in un'unica pagina ht
   (commentato in .gitignore)
 
 - **Paginazione**: fatta manualmente sfruttando i parametri ```page=``` e ```per_age=``` dell'Api. Arbitrariamente la lista paginata prende **10 items** per pagina (ma si potrebbe parametrizzare).
-Conoscendo il numero totale degli items (da fare con un'altra chiamata Api verso https://api.openbrewerydb.org/v1/breweries/meta si può affinare la paginazione deducendo il numero totale di pagine)
+Conoscendo il numero totale degli items (da fare con un'altra chiamata Api verso https://api.openbrewerydb.org/v1/breweries/meta) si può affinare la paginazione deducendo il numero totale delle pagine)
