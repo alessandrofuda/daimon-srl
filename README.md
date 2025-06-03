@@ -11,12 +11,12 @@ pswd: password
 
 - Dopo il login utente mostro il token in pagina.
 
-- Lanciando la call da FE verso endpoint laravel di backend uso il bearer token nell'header Authorization per autenticare la chiamata.
+- Lanciando la call da FE verso endpoint Laravel di backend uso il bearer token nell'header Authorization per autenticare la chiamata.
 
 - Note sul frontend: la pagina da dove lanciare la API call è /breweries.
 Ho evitato di renderizzare la pagina in js, ho fatto tutto in un'unica pagina html/blade senza usare layouts, ecc..
 
-- per praticità in via eccezionale ho versionato anche il .env (che non dovrebbe mai andare sul repo)
+- per praticità ho versionato anche il .env (che non dovrebbe mai andare sul repo)
   (commentato in .gitignore)
 
 - **Paginazione**: fatta manualmente sfruttando i parametri ```page=``` e ```per_age=``` dell'Api. Arbitrariamente la lista paginata prende **10 items** per pagina (ma si potrebbe parametrizzare).
