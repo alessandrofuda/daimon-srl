@@ -19,6 +19,5 @@ Ho evitato di renderizzare la pagina in js, ho fatto tutto in un'unica pagina ht
 - per praticità in via eccezionale ho versionato anche il .env (che non dovrebbe mai andare sul repo)
   (commentato in .gitignore)
 
-- **Paginazione**: sfrutto i parametri ```page=``` e ```per_age=``` dell'Api. La lista paginata prende **10 items** per pagina (ma si potrebbe parametrizzare). 
-Per switchare tra le pagine aggiungere/modificare la parametro ```&page=..``` direttamente in url (se non presente (comportamento di default) --> va a pagina 1).
-  (Invece: per creare la classica paginazione di Laravel col Paginator, usando $breweries->links() direttamente in blade mi restituisce un errore da indagare ulteriormente).
+- **Paginazione**: fatta manualmente sfruttando i parametri ```page=``` e ```per_age=``` dell'Api. Arbitrariamente la lista paginata prende **10 items** per pagina (ma si potrebbe parametrizzare).
+Conoscendo il numero totale degli items (da fare con un'altra chiamata Api verso https://api.openbrewerydb.org/v1/breweries/meta si può affinare la paginazione deducendo il numero totale di pagine)
