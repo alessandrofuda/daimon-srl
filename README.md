@@ -13,7 +13,7 @@ pswd: password
 
 - Lanciando la call da FE verso endpoint laravel di backend uso il bearer token nell'header Authorization per autenticare la chiamata.
 
-- Note sul frontend: la pagina pubblica da dove lanciare la API call è /breweries.
+- Note sul frontend: la pagina da dove lanciare la API call è /breweries.
 Ho evitato di renderizzare la pagina in js, ho fatto tutto in un'unica pagina html/blade senza usare layouts, ecc..
 
 - per praticità in via eccezionale ho versionato anche il .env (che non dovrebbe mai andare sul repo)
