@@ -19,16 +19,13 @@
     <div class="w-full max-w-xl bg-white p-8 rounded-lg shadow-xl mb-8" >
 
         <ul class="list-disc pl-5 space-y-2">
-
-            {{-- dd($breweries)  --}}
-
             @foreach($breweries as $brewerie)
                 <li class="border p-2">
-                    <div>Name: {{$brewerie['name']}}</div>
-                    <div>Type: {{$brewerie['brewery_type']}}</div>
-                    <div>Address: {{$brewerie['address_1']}}</div>
-                    <div>City: {{$brewerie['city']}}</div>
-                    <div>State: {{$brewerie['state_province']}}</div>
+                    <div>Name: {{$brewerie['name'] ?? 'N/A'}}</div>
+                    <div>Type: {{$brewerie['brewery_type'] ?? 'N/A'}}</div>
+                    <div>Address: {{$brewerie['address_1'] ?? 'N/A'}}</div>
+                    <div>City: {{$brewerie['city'] ?? 'N/A'}}</div>
+                    <div>State: {{$brewerie['state_province'] ?? 'N/A'}}</div>
                 </li>
             @endforeach
         </ul>

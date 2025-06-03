@@ -15,7 +15,7 @@
                 <div class="p-6 text-gray-900">
                     Token: {{ $token ?? 'no token found' }}
                     @if($token)
-                        <div>(Per praticità passo il token via Url)</div>
+                        <div>(Per praticità passo il token via Url, normalmente viene storato nel client in localStorage. Il Token viene poi passato alla chiamata API nell'header Authorization)</div>
                     @endif
                 </div>
 

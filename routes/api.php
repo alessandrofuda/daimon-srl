@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/get-breweries', [ApiBreweriesController::class, 'getBreweries'])->middleware('auth:sanctum');
+Route::get('/get-breweries', [ApiBreweriesController::class, 'getBreweriesFromRemoteService'])->middleware('auth:sanctum');
