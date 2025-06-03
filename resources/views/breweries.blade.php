@@ -29,15 +29,19 @@
         @php
             $currentPage = request('page') ?? 1;
             $linkStyle = 'text-blue-600 hover:text-blue-800 underline font-medium';
+            $totalPages = 100; // !IMP: valore arbitrario. Il totalPages andrebbe calcolato con una seconda chiamata Api per avere il totale degli items (vedi note nel README)
         @endphp
 
-        <div class="text-center italic mt-6">
+        <div class="pagination text-center italic mt-6">
             @if($currentPage > 1)
                 <a class="{{ $linkStyle }}" href="{{ request()->fullUrlWithQuery(['page' => (int) $currentPage-1]) }}">Previous</a>
             @endif
+
             <span class="mx-10">Current page: {{ $currentPage }}</span>
 
-            <a class="{{ $linkStyle }}" href="{{ request()->fullUrlWithQuery(['page' => (int) $currentPage+1]) }}">Next</a>
+            @if($currentPage < $totalPages)
+                    <a class="{{ $linkStyle }}" href="{{ request()->fullUrlWithQuery(['page' => (int) $currentPage+1]) }}">Next</a>
+            @endif
         </div>
 
     </div>
