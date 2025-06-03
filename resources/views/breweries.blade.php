@@ -31,11 +31,11 @@
             $linkStyle = 'text-blue-600 hover:text-blue-800 underline font-medium';
         @endphp
 
-        <div class="text-center mt-4">
+        <div class="text-center italic mt-6">
             @if($currentPage > 1)
                 <a class="{{ $linkStyle }}" href="{{ request()->fullUrlWithQuery(['page' => (int) $currentPage-1]) }}">Previous</a>
             @endif
-            <span class="mx-8">Current page: {{ $currentPage }}</span>
+            <span class="mx-10">Current page: {{ $currentPage }}</span>
 
             <a class="{{ $linkStyle }}" href="{{ request()->fullUrlWithQuery(['page' => (int) $currentPage+1]) }}">Next</a>
         </div>
